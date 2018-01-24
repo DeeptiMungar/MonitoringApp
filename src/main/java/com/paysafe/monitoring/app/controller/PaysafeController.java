@@ -43,7 +43,7 @@ public class PaysafeController {
 		return "Welcome " + new Date().toString();
 	}
 
-	@RequestMapping(value = "/start", method = RequestMethod.POST, produces = { "application/json" })
+	@RequestMapping(value = "/start", method = RequestMethod.POST)
 	ResponseEntity<String> startMonioring(@RequestParam(value = "interval", required = true) int interval) {
 		log.info("ENTER: Controller's startMonioring()");
 		HttpStatus httpStatus = HttpStatus.OK;
@@ -77,7 +77,7 @@ public class PaysafeController {
 		}
 	}
 
-	@RequestMapping(value = "/stop", method = RequestMethod.GET, produces = { "application/json" })
+	@RequestMapping(value = "/stop", method = RequestMethod.POST)
 	ResponseEntity<String> stopMonitoring() {
 		log.info("ENTER: Controller's stopMonioring()");
 		HttpStatus httpStatus = HttpStatus.OK;
