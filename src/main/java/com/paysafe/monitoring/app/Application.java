@@ -19,7 +19,7 @@ public class Application extends SpringBootServletInitializer {
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
 	public static void main(String[] args) {
-		log.info("ENTER: main method of spring boot application");
+		log.info("ENTER: main method of spring boot application..");
 		SpringApplication.run(Application.class, args);
 	}
 
